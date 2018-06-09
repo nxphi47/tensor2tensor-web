@@ -14,9 +14,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 + Develop your python model inside ``/backend/models``
 + Encapsulate your model in ``DeploymentModel`` in ``/backend/models/deployment.py``
 + Modify ``DeploymentModel`` with pre-defined methods
-++ ``load_model()`` take ``model_dir`` and ``checkpoint_file`` to restore weights
-++ ``predict(data)`` take the text, do inference, and return the output text with format ``{'response': '<predicted sequence>'}``
-+ Strictly NO numpy data structure in the return object of ``predict(data)``, only JSON accepted.
+
+  + ``load_model()`` take ``model_dir`` and ``checkpoint_file`` to restore weights
+
+  + ``predict(data)`` take the text in form of ``{'input': '<input text>'}``, do inference, and return the output text with format ``{'response': '<predicted sequence>'}``
+
++ Strictly NO numpy data structure in the return object of ``predict(data)``, only JSON accepted. 
+Convert numpy array into normal python array by ``numpy_object.tolist()``
 
 #### Run
 ```bash
