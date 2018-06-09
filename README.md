@@ -27,7 +27,7 @@ npm start
 # open terminal 2
 export MODEL_DIR="your model dir"
 export CHECKPOINT_FILE="your specific checkpoint file"
-python backend.serve.py --model_dir ${MODEL_DIR} --checkpoint_file ${CHECKPOINT_FILE}
+python backend/serve.py --model_dir ${MODEL_DIR} --checkpoint_file ${CHECKPOINT_FILE}
 
 ```
 + Open browser http://localhost:4200 or http://<IP_ADDRESS>:4200 if from another computer
