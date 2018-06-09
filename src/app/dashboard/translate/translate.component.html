@@ -1,0 +1,8 @@
+<mat-form-field
+  [hideRequiredMarker]="false"
+  [floatLabel]="'auto'">
+  <input matInput placeholder="Input" required (keyup.enter)="predict()" [(ngModel)]="inputField">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="predict()">Predict</button>
+<!--output here-->
+<mat-card *ngIf="response != '' && response != null">{{response}}</mat-card>
